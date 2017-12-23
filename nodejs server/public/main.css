@@ -1,0 +1,200 @@
+body {
+	margin: 0px;
+	font-family: Arial;
+	overflow: hidden;
+}
+
+#map {
+	height: 100%;
+}
+
+#overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.right_align {
+	position: absolute;
+	z-index: 998;
+	right: 0px;
+	width: 20%;
+	height: 90%;
+	cursor: default;
+}
+
+.bottom_align {
+	position: absolute;
+	z-index: 998;
+	bottom: 0px;
+	width: 100%;
+	height: 10%;
+	cursor: default;
+}
+
+.transparent {
+	background-color: #111134;
+	opacity: .8;
+}
+
+#time_scrub {
+	z-index: 999;
+	text-align: center;
+}
+
+#controls {
+	z-index: 999;
+	overflow-y: scroll;
+}
+
+.expand {
+	margin: auto;
+	width: 90%;
+	text-align: center;
+	margin-top: 10px;
+	border: 1px solid #9e9e9e;
+	background-color: #efefef;
+	border-radius: 3px;
+}
+
+.expand_head {
+	cursor: pointer;
+	font-size: 22px;
+	padding: 5px;
+}
+
+.inner_expand {
+	display: block;
+	list-style-type: none;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	border-top: 1px solid #bcbcbc;
+}
+
+.inner_expand .option {
+	padding: 5px;
+	border-radius: 20px;
+	width: 60%;
+	margin: auto;
+	margin-bottom: 5px;
+	background-color: #d8d8d8;
+	position: relative;
+	cursor: move;
+}
+
+.optionText {
+	cursor: pointer;
+}
+
+.sel {
+	background-color: #444 !important;
+	color: white !important
+}
+
+.triToggle {
+	font-size: 14px;
+	position: absolute;
+	right: 10%;
+	cursor: pointer;
+}
+
+.triToggle.open {
+	display: none;
+}
+
+.settings {
+	display: none;
+	margin-top: 10px;
+}
+
+.settings input {
+	display: block;
+	margin: auto;
+}
+
+.setting {
+	margin-top: 15px;
+}
+
+.gLayer {
+	font-size: 14px;
+}
+
+.setting input[type='text'] {
+	text-align: center;
+}
+
+.settingLabel {
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+
+input[type='number'] {
+	width: 40px;
+}
+
+#groups [data-setting='layers'] {
+	border: 1px dotted white;
+	padding: 3px;
+}
+
+#time_scrub .slider, #timestamps, #curTime {
+	display: block;
+	position: absolute;
+	transform: translateY(-50%);
+}
+
+#time_scrub .slider {
+	cursor: move;
+	top: 45%;
+	left: 10%;
+	width: 80%;
+}
+
+#curTime {
+	top: 20%;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+#timestamps {
+	top: 75%;
+	width: 85%;
+	left: 8%;
+	font-size: 16px;
+	color: white;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.slideButton {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background-color:#111134;
+	text-align: center;
+	color: white;
+	line-height: 30px;
+	cursor: pointer;
+}
+
+#rightSlide {
+	left: -30px;
+	border-radius: 5px 0px 0px 5px;
+}
+
+#downSlide {
+	position: relative;
+	bottom: 30px;
+	border-radius: 5px 5px 0px 0px;
+}

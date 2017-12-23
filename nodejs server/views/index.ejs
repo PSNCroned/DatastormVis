@@ -1,0 +1,95 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Datastorm
+		</title>
+		
+		<link rel="stylesheet" href="public/libraries/css/leaflet@1.2.0.css" />
+		<link rel="stylesheet" href="public/libraries/css/jquery-ui@1.12.1.min.css" />
+		<link rel="stylesheet" href="public/main.css" />
+		
+		<script src="public/libraries/js/leaflet@1.2.0.js"></script>
+		<script src="public/libraries/js/jquery@3.2.1.js"></script>
+		<script src="public/libraries/js/socket.io@2.0.3.js"></script>
+		<script src="public/libraries/js/proj4@2.4.4.js"></script>
+		<script src="public/libraries/js/jquery-ui@1.12.1.min.js"></script>
+	</head>
+	<body>
+		<script src="public/libraries/js/jscolor.js"></script>
+		<div id="overlay">
+			<div id="right_panel" class="transparent right_align">
+				<div id="rightSlide" class="slideButton" data-visible="1">
+					▶
+				</div>
+			</div>
+			<div id="controls" class="right_align">
+				<div id="layers" class="expand">
+					<div class="expand_head">
+						Layers
+					</div>
+					<div class="inner_expand">
+						
+					</div>
+				</div>
+				<div id="groups" class="expand">
+					<div class="expand_head">
+						Groups
+					</div>
+					<div class="inner_expand">
+						
+					</div>
+				</div>
+				<div id="globalSettings" class="expand">
+					<div class="expand_head">
+						Global Settings
+					</div>
+					<div class="inner_expand">
+						<div class="gSetting">
+							<div class="gLabel">
+								Hover Mode
+							</div>
+							<div class="options">
+								<select data-setting="hover">
+									<option value="layer">Layer</option>
+									<option value="element">Element</option>
+									<option value="none" selected>None</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="bottom_panel" class="transparent bottom_align">
+				<div id="downSlide" class="slideButton" data-visible="1">
+					▼
+				</div>
+			</div>
+			<div id="time_scrub" class="bottom_align">
+				<div id="curTime">
+					<span class="hour">0</span>:00
+				</div>
+				<input id="timeSlide" type="range" min="0" max="100" value="0" class="slider" />
+				<div id="timestamps">
+					<div id="startTime" class="left">
+						
+					</div>
+					<div id="endTime" class="right">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="map"></div>
+		
+		<script>
+			window.socket = io.connect("http://<%= ip %>:<%= port %>");
+		</script>
+		<script src="public/js/templates.js"></script>
+		<script src="public/js/client_map.js"></script>
+		<script src="public/js/client_socket.js"></script>
+		<script src="public/js/client_ui.js"></script>
+	</body>
+</html>
